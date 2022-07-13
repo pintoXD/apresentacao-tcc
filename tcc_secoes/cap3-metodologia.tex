@@ -340,9 +340,9 @@ Reguladores lineares que podem regular a tensão de saída mesmo quando a tensã
 
 
 
-\begin{frame}[allowframebreaks]{Design PCI}
+\begin{frame}{Design PCI}
 
-    
+    \only<1>{
     \begin{block}{Especificações}
     
     \begin{itemize}
@@ -350,13 +350,13 @@ Reguladores lineares que podem regular a tensão de saída mesmo quando a tensã
         \item Placa de duas camada;
     \end{itemize}
     \end{block}
-    
-    
-    \framebreak
+    }
+      
     
     % \framesubtitle{\textit{Stackup} PCI}
     \centering
-    
+    \only<2>{
+
     \begin{block}{\textit{Stackup PCI}}
         
         Define características e parâmetros do cobre e dielétrico de uma PCI.
@@ -366,7 +366,7 @@ Reguladores lineares que podem regular a tensão de saída mesmo quando a tensã
         \centering
         
         
-        \includegraphics[width=0.9\linewidth]{figuras/cap3/pcb/pcb_stackup.png}
+        \includegraphics[width=0.7\linewidth]{figuras/cap3/pcb/pcb_stackup.png}
        
         % \includegraphics{}
         % \caption{}
@@ -377,9 +377,10 @@ Reguladores lineares que podem regular a tensão de saída mesmo quando a tensã
         \label{fig:stackup_pci}
     \end{figure}
     
+    }
     % \item Impedância típica - 50$\Omega$
     
-    \framebreak
+    \only<3>{
     
     \framesubtitle{{Particionamento Funcional}}
     
@@ -404,19 +405,113 @@ Reguladores lineares que podem regular a tensão de saída mesmo quando a tensã
         \end{figure}
     
     \end{columns}
-    
-    \framebreak
+
+    }
+
+    \only<4>{
     
     \framesubtitle{{Posicionamento}}
     
-    % \begin{figure}
-    %     \centering
-    %     \caption{\textit{PCB Placement}}
-    %     \includegraphics[width=0.5\linewidth]{figuras/cap3/pcb/pcb_no_route.png}
-    %     \source{Elaborado pelo autor}
-    %     \label{fig:pcb_placement}
-    % \end{figure}
+    \begin{figure}
+        \centering
+        \caption{\textit{PCB Placement}}
+        \includegraphics[width=0.6\linewidth]{figuras/cap3/pcb/pcb_no_route.png}
+        \source{Elaborado pelo autor}
+        \label{fig:pcb_placement}
+    \end{figure}
+    }
+
+    \only<5>{
+
+    \framesubtitle{{Roteamento}}
+
+    \begin{columns}
+        
+        \column{0.4\linewidth}
+        \centering
+        \begin{itemize}
+            \item Somente sinais inicialmente;
+            \item Largura 10 mil;
+        \end{itemize}
+        
+        \column{0.6\linewidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\linewidth]{figuras/cap3/pcb/pcb_signlas_route.png}
+            \source{Elaborado pelo autor}
+        \end{figure}
+
+
+    \end{columns}
+    }
+
+    \only<6>{
+
+    \framesubtitle{{Roteamento}}
+
+    \begin{columns}
+        
+        \column{0.4\linewidth}
+        \centering
+        \begin{itemize}
+            \item Evita ciclos;
+            \item Largura 20 mil;
+        \end{itemize}
+        
+        \column{0.6\linewidth}
+        \begin{figure}
+            \centering
+            \includegraphics[width=\linewidth]{figuras/cap3/pcb/pcb_with_power.png}
+            \source{Elaborado pelo autor}
+        \end{figure}
+
+
+    \end{columns}
+
+    }
+
+
+    \only<7>{
+
+        \begin{block}{Plano de Terra}
+            Propicia o menor caminho de retorno possível
+        \end{block}
+
+        % \vspace{10pt}
+
+        \begin{columns}
+        % \begin{figure}
+            
     
+            % \begin{subfigure}{0.5\linewidth}
+                \column{0.45\linewidth}
+                \centering
+                % \vspace{3pt}
+                \captionof{figure}{Top Plane}
+                \includegraphics[width=\linewidth]{figuras/cap3/pcb/pcb_top_plane.png}
+                % \source{Elaborado pelo autor}
+            % \end{subfigure}   
+            
+            % \begin{subfigure}{0.5\linewidth}
+                \column{0.45\linewidth}
+                \centering
+                % \vspace{3pt}
+                \captionof{figure}{Bottom Plane}
+                \includegraphics[width=\linewidth]{figuras/cap3/pcb/pcb_bottom_plane.png}
+                % \source{Elaborado pelo autor}
+                
+            % \end{subfigure}
+
+            % \source{Elaborado pelo autor}
+        % \end{figure}
+        \end{columns}
+
+        \begin{figure}
+            \centering
+            \source{Elaborado pelo autor}
+        \end{figure}
+
+    }
     
     
     
