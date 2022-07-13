@@ -1,1 +1,10 @@
 *.aux
+document.blg
+document.fdb_latexmk
+document.fls
+document.log
+document.nav
+document.out
+document.snm
+document.synctex.gz
+document.toc
