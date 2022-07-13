@@ -1,0 +1,74 @@
+% !TeX root = document.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% This project aims to create the UFC template for presentation.                %%
+%% author: Maurício Moreira Neto - Doctoral student in Computer Science (MDCC)   %%
+%% contacts:                                                                     %%
+%%    e-mail: maumneto@ufc.br                                                    %%
+%%    linktree: https://linktr.ee/maumneto                                       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{libs/ufc_format}
+% Inserting the preamble file with the packages
+\input{libs/preamble.tex}
+% Inserting the references file
+\bibliography{references.bib}
+
+% Title
+\title[short title]{\huge\textbf{Título da Apresentação}}
+% Subtitle
+\subtitle{Subtítulo da Apresentação}
+% Author of the presentation
+\author{Otto Sousa}
+% Institute's Name
+\institute[UFC]{
+    % email for contact
+    \normalsize{\email{ottolopes20@gmail.com}}
+    \newline
+    % Department Name
+    \department{Departamento de Engenharia de Teleinformática}
+    \newline
+    % university name
+    \ufc
+}
+% date of the presentation
+\date{\today}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Start Document of the Presentation                                           %%               
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+% insert the code style
+\input{libs/code_style}
+
+%% ---------------------------------------------------------------------------
+% First frame (with tile, subtitle, ...)
+\begin{frame}{}
+    \maketitle
+\end{frame}
+
+%% ---------------------------------------------------------------------------
+% Second frame
+\begin{frame}{Sumário}
+    \begin{multicols}{2}
+        \tableofcontents
+    \end{multicols}
+\end{frame}
+
+%% ---------------------------------------------------------------------------
+% This presentation is separated by sections and subsections
+\include{sections/section-1}
+
+\include{sections/section-2}
+
+
+\include{tcc_secoes/cap1-introducao}
+\include{tcc_secoes/cap2-fundamentacao}
+\include{tcc_secoes/cap3-metodologia}
+\include{tcc_secoes/cap4-resultados}
+\include{tcc_secoes/cap5-conclusao}
+
+
+\include{sections/section-3}
+
+\end{document}

@@ -1,0 +1,195 @@
+\section{Fundamentação Teórica}
+\begin{frame}{Sistemas Embarcados}
+
+São sistemas computacionais que são parte integrante de um produto ou ferramenta e são limitados em tamanho, consumo, poder de processamento e custo. 
+
+\end{frame}
+
+%% ---------------------------------------------------------------------------
+
+\begin{frame}{Sistemas Embarcados}
+    Produtos que possuem um sistema embarcado são:
+
+    \begin{itemize}
+        \item Controles remotos;
+        \item Impressoras;
+        \item Eletrodomésticos;
+        \item Automóveis;
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Sistemas embarcados}
+
+    Possuem \textit{hardwares} muito diferentes entre si mas há uma estrutura básica que consiste de:
+    \begin{itemize}
+        \item Unidade de processamento;
+        \item Interfaces de entrada e saída para interação;
+        \item Memórias de dados e de programa;
+        \item Interfaces de comunicação;
+        \item Unidade de fornecimento de energia elétrica;
+        
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Tecnologias de processamento}
+
+Característica chave em um sistema embarcado, categoriza as variadas formas de como a unidade de processamento é organizada para realizar uma dada tarefa. 
+
+\end{frame}
+
+\begin{frame}{Processadores de uso geral}
+
+    \begin{itemize}
+        \item Dispositivos programáveis;
+        \item Possuem grande número de instruções;
+        \item Pode executar múltiplos processos simultaneamente;
+        \item Menor tempo de desenvolvimento;
+        \item Maior custo unitário.
+        
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Processadores especializados}
+
+    \begin{itemize}
+        \item Número de instruções reduzidos;
+        \item Menor custo e poder de processamento;
+        \item Menor custo unitário; 
+        \item Maior tempo de desenvolvimento;
+        \item Podem ser programados;
+    \end{itemize}
+
+    
+\end{frame}
+
+
+\begin{frame}{Processadores especializados}
+
+    \begin{itemize}
+        \item Microcontroladores
+            
+            \begin{itemize}
+                \item CPU, RAM, I/O, UART, I²C e SPI em um mesmo chip;
+                \item Otimizado para aplicações de controle;
+                \item Não lida com grande volume de dados ou cálculos complexos;
+            \end{itemize}
+            
+        \item \textit{Digital Signal Processors}
+            
+            \begin{itemize}
+                \item Semelhante a microcontroladores;
+                \item Realiza operações de adição e multiplicação mais eficientemente;
+                \item Processa grande volume de dados;
+                \item Otimizado para processamento de sinais;
+            \end{itemize}
+            
+    \end{itemize}
+
+    
+\end{frame}
+
+
+
+
+\begin{frame}{Processadores dedicados}
+
+\begin{itemize}
+    \item Não programáveis;
+    \item Implementa instruções para uma aplicação em específica;
+    \item Maior custo de desenvolvimento;
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Processadores dedicados}
+
+    \begin{itemize}
+        \item Application Specific Integrated Circuit (ASIC)
+        \begin{itemize}
+            \item Circuito integrado de aplicação específica;
+            \item Possui a lógica necessária para execução de tarefas;
+            \item Não permite reconfiguração da lógica implementada;
+        \end{itemize}
+        
+        \item Field Programmable Gate Array
+        
+            \begin{itemize}
+                \item Semelhante ao ASIC;
+                \item Matriz de blocos lógicos reconfiguráveis;
+                \item Conexões programáveis interligam os blocos da matriz;
+                \item Permite a reconfiguração da lógica implementada;
+            \end{itemize}
+    \end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{System-On-A-Chip}
+    \begin{itemize}
+
+    \item Circuito integrado formado por diversos módulos que compõem um sistema computacional;
+    
+    \item Visa reduzir o número de CIs utilizados em um sistema embarcado;
+    
+    \item Implementa módulos além de CPU, RAM e I/Os;
+    
+        \begin{itemize}
+            \item Módulos de comunicação sem fio; 
+            \item Módulos de processamento de sinais.
+        \end{itemize}
+    
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Desafios de Projeto}
+
+    \begin{itemize}
+    
+        \item Um sistema embarcado deve atingir a dependabilidade;
+        
+        \begin{itemize}
+            \item Segurança da informação;
+            \item Confidencialidade;
+            \item Operação segura;
+            \item Confiabilidade;
+            \item Reparabilidade;
+        \end{itemize}
+        
+        
+        \item Realizar uso eficiente dos recursos computacionais disponíveis;
+        
+        
+    \end{itemize}
+    
+    
+    
+    
+
+    
+\end{frame}
+
+
+
+
+
+% \subsection{Subseção I}
+% \begin{frame}{Criando Blocos}
+%     % Blocks styles
+%     \begin{block}{Bloco Padrão}
+%         Texto do corpo do bloco.
+%     \end{block}
+
+%     \begin{alertblock}{Bloco de Alerta}
+%         Texto do corpo do bloco.
+%     \end{alertblock}
+
+%     \begin{exampleblock}{Bloco de Exemplo}
+%         Texto do corpo do bloco.
+%     \end{exampleblock}   
+% \end{frame}

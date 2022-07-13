@@ -1,0 +1,9 @@
+{
+    "latex-workshop.latex.search.rootFiles.include": [
+        "**/*.tex",
+        "**/*.rnw",
+        "**/*.Rnw",
+        "document.tex"
+    ],
+    "latex-workshop.intellisense.citation.backend": "biblatex"
+}

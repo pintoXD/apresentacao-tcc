@@ -1,0 +1,30 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {brazil}{}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Seção I}{3}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{1}{Subseção I}{4}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{2}{Subseção II}{5}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{3}{Subseção III}{8}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{Multicolunas}{13}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Introdução}{14}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Fundamentação Teórica}{18}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{Metodologia}{29}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {5}{1}{Subseção I}{46}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {6}{Resultados}{47}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {6}{1}{Energia}{51}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {7}{Conclusão}{55}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {7}{1}{Subseção I}{56}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {8}{Imagens}{57}{0}{8}
