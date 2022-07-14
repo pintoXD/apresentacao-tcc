@@ -1,133 +1,252 @@
 \section{Resultados}
 
+\begin{frame}{Resultados}
 
+	\only<1>{
+		
+	\framesubtitle{Propriedades e Design finais}
 
+	Propriedades:
+	\begin{itemize}
+		\item Temperaturas de -20 °C a 80 °C;
+		\begin{itemize}
+			\item Precisão de $\pm$ 0,4 °C.
+		\end{itemize}
 
+		\item Umidade relativa de 0\% a 99\%;
+		\begin{itemize}
+			\item Precisão de $\pm$ 2\%.
+		\end{itemize}
+		\item Luminosidade de 10 lux a 10.000 lux.
+		\item \textit{microSD} de até 4GB;
+		\item Wi-Fi ou Bluetooth;
+	\end{itemize}
 
-
-\begin{frame}{Produção - Lista de materiais}
-
-
-	\begin{table}[!h]
-	\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
-	\caption{\label{tab:custos_fabricacao} Custo de materiais por unidades}%
-% 	
-		\begin{tabular}{cccc}
-			\toprule
-			Quantidade & Custo de Materiais  \\
-			\midrule \midrule
-			50 &  US\$ 502,60  \\
-			100 &  US\$ 938,41 \\
-			1000 & US\$ 8.736,80  \\
-			\bottomrule
-		\end{tabular}%
-% 	}
-	{%
-	
-% 	\Nota{esta é uma nota, que diz que os dados são baseados na
-% 		regressão linear.}%
-% 	\Nota[Anotações]{uma anotação adicional, seguida de várias outras.}%
-    }
-    
-    \tiny{o autor.}%
-    \end{table}    
-
-\end{frame}
-
-
-\begin{frame}{Produção - Fabricação - Custo unitário}
-
-
-	\begin{table}[!h]
-	\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
-	\caption{\label{tab:custos_montagem} Custos de fabricação e montagem JLCPCB}%
-% 	
-		\begin{tabular}{cccc}
-			\toprule
-			Quantidade & Fabricação & Montagem & Total \\
-			\midrule \midrule
-			50 &  US\$ 22,4 & US\$ 64,47 & US\$ 86,87 \\
-			100 &  US\$ 34,4 & US\$ 96,97 & US\$ 131,37 \\
-			1000 & US\$ 249,70 & US\$ 447,92 & US\$ 667,62 \\
-			\bottomrule
-		\end{tabular}%
-% 	}
-	{%
-	
-% 	\Nota{esta é uma nota, que diz que os dados são baseados na
-% 		regressão linear.}%
-% 	\Nota[Anotações]{uma anotação adicional, seguida de várias outras.}%
-    }
-    
-    \tiny{o autor.}%
-    \end{table}
-
-
-
-    \begin{table}[!h]
-	\captionsetup{width=7cm}%Deixe da mesma largura que a tabela
-	\caption{\label{tab:custos_fabricacao_unitário} Custos de total unitário}%
-% 	
-		\begin{tabular}{cccc}
-			\toprule
-			Quantidade & Custo Total & Custo Unitário  \\
-			\midrule \midrule
-			50 &  US\$ 582,42 & US\$ 11,65 \\
-			100 &  US\$ 1048,93 & US\$ 10,49  \\
-			1000 & US\$ 9261,29 & US\$ 9,26  \\
-			\bottomrule
-		\end{tabular}%
-% 	}
-	{%
-	
-% 	\Nota{esta é uma nota, que diz que os dados são baseados na
-% 		regressão linear.}%
-% 	\Nota[Anotações]{uma anotação adicional, seguida de várias outras.}%
-    }
-    
-    \tiny{o autor.}%
-    
-    \end{table}
-
-
-
-
-\end{frame}
-
-
-
-
-\begin{frame}{Produção - custo frete}
-
-	\begin{table}[!h]
-	\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
-	\caption{\label{tab:custos_transporte} Custos de transporte para o Brasil}%
-% 	
-		\begin{tabular}{cc}
-			\toprule
-			Quantidade & Valor  \\
-			\midrule \midrule
-			50 &  US\$ 80,36   \\
-			100 &  US\$ 110,52 \\
-			1000 & US\$ 524,49 \\
-			\bottomrule
-		\end{tabular}%
-% 	}
-	{%
-	\tiny{o autor.}%
 	}
-	\end{table}
 
+	\only<2>{
+		
+		\framesubtitle{Propriedades e Design finais}
+
+		\begin{columns}
+			
+			\column{0.35\linewidth}
+			\centering
+			% PCI: \hspace{10pt}
+			Especificações PCI:
+			\begin{itemize}
+				\item 3,3 V a 6,5 V;
+				\item 39 componentes;
+				\item 51 x 53 mm;
+			\end{itemize}
+
+			\column{0.65\linewidth}
+			\raggedright	
+			\begin{figure}
+				\centering
+				\caption{Visualização 3D da PCI}
+				\includegraphics[width=\linewidth]{figuras/cap3/pcb/printd_3d_pcb.png}
+				\source{Elaborado pelo autor.}
+			\end{figure}
+
+		\end{columns}
+
+
+	}
+	
+\end{frame}
+
+
+\begin{frame}{Produção}
+
+	
+	
+	\only<1>{
+		
+		\framesubtitle{Materiais}
+		\begin{itemize}
+			\item Fornecedor de Componentes
+			\begin{itemize}
+				\item LCSC Electronics
+			\end{itemize}
+			\item Fabricação e Montagem PCI
+			\begin{itemize}
+				\item JLCPCB
+			\end{itemize}
+
+		\end{itemize}
+
+		
+		\begin{table}[!h]
+			\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
+			\caption{\label{tab:custos_fabricacao} Custo de materiais por unidades}%
+			% 	
+			\begin{tabular}{cccc}
+					\toprule
+					Quantidade & Custo de Materiais  \\
+					\midrule \midrule
+					50 &  US\$ 502,60  \\
+					100 &  US\$ 938,41 \\
+					1000 & US\$ 8.736,80  \\
+					\bottomrule
+				\end{tabular}%
+				% 	}
+				\source{o autor.}%
+			\end{table}    
+			
+			
+			
+		}
+
+
+	\only<2>{
+
+	
+		\framesubtitle{Fabricação e Montagem}
+		% \begin{itemize}
+		% 	\item JLCPCB
+		% 	\begin{itemize}
+		% 		\item Fabricação PCI;
+		% 		\item Montagem PCI.
+		% 	\end{itemize}
+
+			% \item 
+		% \end{itemize}
+
+
+		% \begin{columns}
+
+			% \column{0.5\linewidth}
+			\begin{table}[!h]
+			\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
+			\caption{\label{tab:custos_montagem} Custos de Fabricação e Montagem}%
+			\resizebox{0.6\textwidth}{!}{
+				\begin{tabular}{cccc}
+					\toprule
+					Quantidade & Fabricação & Montagem & Total \\
+					\midrule \midrule
+					50 &  US\$ 22,4 & US\$ 64,47 & US\$ 86,87 \\
+					100 &  US\$ 34,4 & US\$ 96,97 & US\$ 131,37 \\
+					1000 & US\$ 249,70 & US\$ 447,92 & US\$ 667,62 \\
+					\bottomrule
+				\end{tabular}%
+			}
+			% \tiny{o autor.}%
+			\source{o autor.}%
+			\end{table}
+
+			\vspace{-15pt}
+			% \column{0.5\linewidth}
+			\begin{table}[!h]
+				\captionsetup{width=7cm}%Deixe da mesma largura que a tabela
+				\caption{\label{tab:custos_fabricacao_unitario} Custo Unitário}%
+				\resizebox{0.5\textwidth}{!}{
+					\begin{tabular}{cccc}
+						\toprule
+						Quantidade & Custo Total & Custo Unitário  \\
+						\midrule \midrule
+						50 &  US\$ 582,42 & US\$ 11,65 \\
+						100 &  US\$ 1048,93 & US\$ 10,49  \\
+						1000 & US\$ 9261,29 & US\$ 9,26  \\
+						\bottomrule
+					\end{tabular}%
+				}
+					
+				\source{o autor.}%
+				
+			\end{table}
+
+		% \end{columns}
+
+
+
+
+
+	}
+
+
+
+    % \only<3>{
+
+
+	% 	\framesubtitle{Custos unitários}
+
+
+
+	% 	\begin{columns}
+			
+	% 		\column{0.5\linewidth}
+	% 		\begin{table}[!h]
+	% 			\captionsetup{width=7cm}%Deixe da mesma largura que a tabela
+	% 			\caption{\label{tab:custos_fabricacao_unitario} Custo unitário}%
+	% 			\resizebox{0.9\linewidth}{!}{
+	% 				\begin{tabular}{cccc}
+	% 					\toprule
+	% 					Quantidade & Custo Total & Custo Unitário  \\
+	% 					\midrule \midrule
+	% 					50 &  US\$ 582,42 & US\$ 11,65 \\
+	% 					100 &  US\$ 1048,93 & US\$ 10,49  \\
+	% 					1000 & US\$ 9261,29 & US\$ 9,26  \\
+	% 					\bottomrule
+	% 				\end{tabular}%
+	% 			}
+					
+	% 			\source{o autor.}%
+				
+	% 		\end{table}
+
+	% 		\column{0.5\linewidth}
+
+	% 			\begin{table}[!h]
+	% 				\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
+	% 				\caption{\label{tab:custos_transporte} Custos de transporte para o Brasil}%
+	% 				\resizebox{0.6\linewidth}{!}{
+	% 						\begin{tabular}{cc}
+	% 							\toprule
+	% 							Quantidade & Valor  \\
+	% 							\midrule \midrule
+	% 							50 &  US\$ 80,36   \\
+	% 							100 &  US\$ 110,52 \\
+	% 							1000 & US\$ 524,49 \\
+	% 							\bottomrule
+	% 						\end{tabular}%
+	% 				}
+	% 				\source{o autor.}%
+	% 			\end{table}
+
+
+	% 	\end{columns}
+
+
+
+
+
+
+	% }
 
 
 \end{frame}
+% \begin{frame}{Produção - custo frete}
+% \end{frame}
 
-\begin{frame}{Produção - Custos de Importação}
+\begin{frame}{Custos de Importação}
 
+
+
+
+	Fatores considerados durante o cálculo dos custos de importação: 
+
+	\begin{itemize}
+		\item Cotação: R\$5,13 p/ cada Dólar;
+		\item Imposto de importação zerado;
+		\item ICMS para o estado do Ceará.
+	\end{itemize}
+
+	
 	\begin{table}[!h]
 	\captionsetup{width=10cm}%Deixe da mesma largura que a tabela
 	\caption{\label{tab:custos_importacao} Custos de importação para o Brasil}
-% 	
+		\resizebox{0.5\linewidth}{!}{
 		\begin{tabular}{ccccccccc}
 			\toprule
 			Quantidade & Valor & Frete & IPI & PIS & COFINS & ICMS & Total & Valor Unitário  \\
@@ -137,10 +256,9 @@
             1000 & 44.831,14 & 2.691,32 & 617,79 & 997,97 & 4.585,92 & 11.793,10 & 65.517,24 & 65,52\\
 			\bottomrule
 		\end{tabular}%
-% 	}
-	{%
-	\tiny{o autor.}%
-	}
+		}
+		\source{o autor.}%
+
 	\end{table}
 
 
@@ -148,7 +266,7 @@
     
 \end{frame}
 
-\subsection{Energia}
+% \subsection{Energia}
 \begin{frame}{Energia}
 
 	\begin{table}[!h]
