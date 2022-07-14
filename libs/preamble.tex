@@ -35,3 +35,8 @@
 \usepackage{booktabs}
 
 \usepackage[flushleft]{threeparttable}
+
+\def\boxit#1{%
+  \smash{\color{red}\fboxrule=1pt\relax\fboxsep=2pt\relax%
+  \llap{\rlap{\fbox{\vphantom{0}\makebox[#1]{}}}~}}\ignorespaces
+}

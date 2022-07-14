@@ -242,11 +242,12 @@
 		\item ICMS para o estado do Ceará.
 	\end{itemize}
 
-	
+
 	\begin{table}[!h]
 	\captionsetup{width=10cm}%Deixe da mesma largura que a tabela
 	\caption{\label{tab:custos_importacao} Custos de importação para o Brasil}
-		\resizebox{0.5\linewidth}{!}{
+	\vspace{-10pt}
+		\resizebox{\textwidth}{!}{
 		\begin{tabular}{ccccccccc}
 			\toprule
 			Quantidade & Valor & Frete & IPI & PIS & COFINS & ICMS & Total & Valor Unitário  \\
@@ -266,176 +267,337 @@
     
 \end{frame}
 
+
 % \subsection{Energia}
 \begin{frame}{Energia}
-
-	\begin{table}[!h]
-	\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
-	\caption{\label{tab:consumos_circuitos} Consumo por circuito em uso ativo}%
-% 	
-		\begin{tabular}{cc}
-			\toprule
-			Circuito & Consumo \\
-			\midrule \midrule
-			Controle  &  30  mA \\
-			Sensores  &  27 mA  \\
-			Circuito microSD   &   100 mA\\
-			Interface de Usuário & 60 mA\\
-		    \bottomrule
-		\end{tabular}%
-% 	}
-	{%
-	\tiny{o autor.}%
-% 	\Nota{esta é uma nota, que diz que os dados são baseados na
-% 		regressão linear.}%
-% 	\Nota[Anotações]{uma anotação adicional, seguida de várias outras.}%
-    }
-    \end{table}
-
-	\begin{table}[!h]
-	\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
-	\caption{\label{tab:consumos_sono_profundo} Consumo por circuito em sono profundo}%
-% 	
-		\begin{tabular}{cc}
-			\toprule
-			Circuito & Consumo \\
-			\midrule \midrule
-			Controle  &  8 $\mu$A \\
-			Sensores  &  0,2 $\mu$A  \\
-			Regulador de tensão  & 65 $\mu$A\\
-			Circuito microSD & 450$\mu$A \\
-			Interface de Usuário & 0 $\mu$A \\
-		    \bottomrule
-		\end{tabular}%
-% 	}
-	{%
-	\tiny{o autor.}%
-% 	\Nota{esta é uma nota, que diz que os dados são baseados na
-% 		regressão linear.}%
-% 	\Nota[Anotações]{uma anotação adicional, seguida de várias outras.}%
-    }
-    \end{table}
+	
+	
 
 
-    
+
+	\only<1>{		
+		\framesubtitle{Consumo por modo de operação}
+	
+		\begin{columns}
+			
+			\column{0.5\textwidth}
+			\centering
+			\begin{table}[!h]
+			\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
+			\caption{\label{tab:consumos_circuitos} Consumo por circuito em uso ativo}%
+			\resizebox{0.9\textwidth}{!}{
+				\begin{tabular}{cc}
+						\toprule
+						Circuito & Consumo \\
+						\midrule \midrule
+						Controle  &  30  mA \\
+						Sensores  &  27 mA  \\
+						Circuito microSD   &   100 mA\\
+						Interface de Usuário & 60 mA\\
+						% \hline
+						% \vspace{10pt}
+						\midrule \midrule
+						Total & 217 mA\\
+						\bottomrule
+						% \vspace{3pt}\\
+					\end{tabular}%
+			}
+			
+			\source{o autor.}%
+
+			\end{table}
+
+			\column{0.5\textwidth}
+			\centering
+			\begin{table}[!h]
+				\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
+				\caption{\label{tab:consumos_sono_profundo} Consumo por circuito em sono profundo}%
+					\resizebox{0.9\textwidth}{!}{
+						\begin{tabular}{cc}
+							\toprule
+							Circuito & Consumo \\
+							\midrule \midrule
+							Controle  &  8 $\mu$A \\
+							Sensores  &  0,2 $\mu$A  \\
+							Regulador de tensão  & 65 $\mu$A\\
+							Circuito microSD & 450$\mu$A \\
+							Interface de Usuário & 0 $\mu$A \\
+							\midrule \midrule
+							Total & 523,2 $\mu$A\\					
+							\bottomrule
+							% \vspace{3pt}\\
+						\end{tabular}%
+					}	
+				\source{o autor.}%
+			\end{table}
+
+
+
+
+
+		\end{columns}
+
+	}
+
+
+	\only <2>{
+
+
+		\framesubtitle{Autonomia}
+
+		% \begin{block}{Condições}
+		O datalogger possui autonomia de até dois meses, de acordo com as seguintes condições:
+
+		\begin{itemize}
+			\item Considerado intervalo de 30 minutos;
+			\item Duração em modo ativo: 10 segundos;
+			\item Duração em modo sono profundo: 29m 50s;
+			\item Quatro pilhas AA de 2500 mAh cada.
+		\end{itemize}		
+		% \end{block}	
+		\begin{block}{Estratégias de otimização}		
+			\begin{itemize}
+				\item Utilizar \textit{Flash} interna;
+				\begin{itemize}
+					\item Armazena 83.886 leituras;
+				\end{itemize}
+				\item Desconectar microSD;
+				\begin{itemize}
+					\item MOSFET Q600;
+				\end{itemize}
+			\end{itemize}
+		\end{block}
+
+		
+
+	}   
 \end{frame}
 
 
 \begin{frame}{Comparativo de mercado}
     
-    \begin{table}[!h]
-    	
-    	\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
-    	\caption{\label{tab:compara_dimensoes} \textit{Comparativo: Dimensões e Autonomia}}%
-    % 	\resizebox{\textwidth}{!}{
-    	
-    		\begin{tabular}{cccc}
-    			\toprule
-    			Modelo & Dimensões & Nível de Proteção  & Autonomia \\
-    			\midrule \midrule
-               RCW-360           & Não informado   & IP64/IP65 & 3 meses       \\
-               EL-WiFi-TH        & 82 x 70 x 23 mm & IP55  &6 meses       \\
-               TandD RTR-507B    & 62 x 47 x 19 mm & IP64  &10 meses      \\
-               160 TH            & 76 x 64 x 22 mm & IP20  & Não informado \\
-               Hardware Proposto & 51 x 53 x 25 mm & Não possui & 2 meses  \\
-    	    \bottomrule
-    		\end{tabular}%
-    % 	}{%
-    	\tiny{o autor.}%
+	
 
-    \end{table}
+	\framesubtitle{Dimensões e Autonomia}
+	% \draw[] (A) rectangle (B);}draw=red
+		\begin{table}[!h]
+			
+			\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
+			\caption{\label{tab:compara_dimensoes} \textit{Comparativo: Dimensões e Autonomia}}%
+			\vspace{-5pt}
+			\resizebox{0.75\textwidth}{!}{
+			
+				\begin{tabular}{cccc}
+					\toprule
+					Modelo & Dimensões & Nível de Proteção  & Autonomia \\
+					\midrule \midrule
+				RCW-360           & Não informado   & IP64/IP65 & 3 meses       \\
+				EL-WiFi-TH        & 82 x 70 x 23 mm & IP55  &6 meses       \\
+				TandD RTR-507B    & 62 x 47 x 19 mm & IP64  &10 meses      \\
+				160 TH            & 76 x 64 x 22 mm & IP20  & Não informado \\
+				\only<1>{Hardware Proposto & 51 x 53 x 25 mm & Não possui & 2 meses}
+				\only<2-3>{Hardware Proposto & \boxit{73pt}51 x 53 x 25 mm & Não possui & \boxit{45pt}2 meses}
+				\\
+				\bottomrule
+				\end{tabular}%
+			}
+			\source{o autor.}%
+		\end{table}
+		\vspace{-15pt}	
+		\begin{table}[!h]
+	
+			\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
+			\caption{\label{tab:compara_precisao} \textit{Comparativo: Faixa de leitura e Precisão}}%
+			\vspace{-5pt}	
+			\resizebox{0.9\textwidth}{!}{
+			
+				\begin{tabular}{ccccccc}
+					\toprule
+					Modelo & Faixa de Leitura (ºC) & Precisão (ºC) & Umidade Relativa (\%) & Precisão(\%)\\
+					\midrule \midrule
+				   RCW-360           & -35 a 80      & 0,5 & 0 a 99 & 5    \\
+				   EL-WiFi-TH        & -20 a 60      & 0,3 & 0 a 100 & 2    \\
+				   TandD RTR-507B    & -25 a 70      & 0,3 & 0 a 99  & 2,50 \\
+				   \only160 TH            & -30 a 50      & 0,1 & 0 a 100 & 2 \\
+				   \only<1-2>{Hardware Proposto & -20 a 85      & 0,4 & 0 a 100 & 2}
+				   \only<3>{\boxit{420pt}Hardware Proposto & -20 a 85      & 0,4 & 0 a 100 & 2}
+				   \\
+				\bottomrule
+				\end{tabular}%
+			}
+			
+			\source{o autor.}%
+		
+			\end{table}
 
-    
+	
 
-
-
-    
 \end{frame}
 
 
 
 
 
-\begin{frame}{Comparativo - Precisão}
+% \begin{frame}{Comparativo - Precisão}
 
 
-\begin{table}[!h]
+% \begin{table}[!h]
 	
-	\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
-	\caption{\label{tab:compara_precisao} \textit{Comparativo: Faixa de leitura e Precisão}}%
-% 	\resizebox{\textwidth}{!}{
+% 	\captionsetup{width=9cm}%Deixe da mesma largura que a tabela
+% 	\caption{\label{tab:compara_precisao} \textit{Comparativo: Faixa de leitura e Precisão}}%
+% % 	\resizebox{\textwidth}{!}{
 	
-		\begin{tabular}{ccccccc}
-			\toprule
-			Modelo & Faixa de Leitura (ºC) & Precisão (ºC) & Umidade Relativa (\%) & Precisão(\%)\\
-			\midrule \midrule
-           RCW-360           & -35 a 80      & 0,5 & 0 a 99 & 5    \\
-           EL-WiFi-TH        & -20 a 60      & 0,3 & 0 a 100 & 2    \\
-           TandD RTR-507B    & -25 a 70      & 0,3 & 0 a 99  & 2,50 \\
-           160 TH            & -30 a 50      & 0,1 & 0 a 100 & 2 \\
-           Hardware Proposto & -20 a 85      & 0,4 & 0 a 100 & 2\\
-	    \bottomrule
-		\end{tabular}%
+% 		\begin{tabular}{ccccccc}
+% 			\toprule
+% 			Modelo & Faixa de Leitura (ºC) & Precisão (ºC) & Umidade Relativa (\%) & Precisão(\%)\\
+% 			\midrule \midrule
+%            RCW-360           & -35 a 80      & 0,5 & 0 a 99 & 5    \\
+%            EL-WiFi-TH        & -20 a 60      & 0,3 & 0 a 100 & 2    \\
+%            TandD RTR-507B    & -25 a 70      & 0,3 & 0 a 99  & 2,50 \\
+%            160 TH            & -30 a 50      & 0,1 & 0 a 100 & 2 \\
+%            Hardware Proposto & -20 a 85      & 0,4 & 0 a 100 & 2\\
+% 	    \bottomrule
+% 		\end{tabular}%
 
-	\tiny{o autor.}%
+% 	\tiny{o autor.}%
 
-    \end{table}
+%     \end{table}
 
+    
+% \end{frame}
+
+\begin{frame}{Comparativo}
+	\only<1>{
+		\framesubtitle{Custo Unitário}	
+		\begin{columns}
+
+			\column{0.5\textwidth}
+
+				Custos não considerados:
+				\begin{itemize}
+					\item Desenvolvimento de \textit{firmware};
+					\item Invólucro de proteção;
+					\item Homologação em órgãos competentes;
+				\end{itemize}
+
+			\column{0.5\textwidth}
+
+				\begin{table}[!h]
+				
+				\captionsetup{width=7cm}%Deixe da mesma largura que a tabela
+				\caption{\label{tab:compara_custo} \textit{Comparativo: Custo Unitário}}%
+				\resizebox{0.8\textwidth}{!}{
+				
+					\begin{tabular}{cc}
+						\toprule
+						Modelo & Valor (R\$)\\
+						\midrule \midrule
+					RCW-360           & 1.499,00  \\
+					EL-WiFi-TH        & 1.305,14  \\
+					TandD RTR-507B    & 2.242,57 \\
+					160 TH            & 2.842,00  \\
+					Hardware Proposto & 65,52  \\
+					\bottomrule
+					\end{tabular}%
+
+					
+				}
+					\source{o autor.}
+					
+				\end{table}    
+
+		\end{columns}
+    
+	}
     
 \end{frame}
 
 
 
-
-
-\begin{frame}{Comparativo - Preço Unitário}
-
-    \begin{table}[!h]
+\begin{frame}{Comparativo}
+	% \only<2>{
+	\framesubtitle{Revisão de Custo}
 	
-	\captionsetup{width=7cm}%Deixe da mesma largura que a tabela
-	\caption{\label{tab:compara_custo} \textit{Comparativo: Custo unitário}}%
-% 	\resizebox{\textwidth}{!}{
-	
-		\begin{tabular}{cc}
-			\toprule
-			Modelo & Valor (R\$)\\
-			\midrule \midrule
-           RCW-360           & 1.499,00  \\
-           EL-WiFi-TH        & 1.305,14  \\
-           TandD RTR-507B    & 2.242,57 \\
-           160 TH            & 2.842,00  \\
-           Hardware Proposto & 65,52  \\
-	    \bottomrule
-		\end{tabular}%
+	\only<1>{
 
-	\tiny{o autor.}%
+		\begin{block}{Estimativas de custo}
+			\begin{itemize}
+				\item Firmware
+				\begin{itemize}
+					\item Salário desenvolvedor pleno: R\$ 7919,00
+					\item Três meses de projeto com dois profissionais: R\$47.514,00
+				\end{itemize}
+				
+				\item Invólucro IP65
+				\begin{itemize}
+					\item Custo unitário: R\$20,00;
+					\item Custo com retrabalho: R\$50,00;
+				\end{itemize}
+				
+				\item Homologação ANATEL.
+				\begin{itemize}
+					\item A verificar.
+				\end{itemize}
+			\end{itemize}
+			
+		\end{block}
 
-    % }
-    \end{table}    
-    
-    
-    \begin{table}[!h]
-	
-	\captionsetup{width=7cm}%Deixe da mesma largura que a tabela
-	\caption{\label{tab:custos_extras} \textit{Comparativo: Custo unitário revisado}}%
-% 	\resizebox{\textwidth}{!}{
-	
-		\begin{tabular}{cc}
-			\toprule
-			Modelo & Valor (R\$)\\
-			\midrule \midrule
-           RCW-360           & 1.499,00  \\
-           EL-WiFi-TH        & 1.305,14  \\
-           TandD RTR-507B    & 2.242,57 \\
-           160 TH            & 2.842,00  \\
-           Hardware Proposto & 142,35  \\
-	    \bottomrule
-		\end{tabular}%
-	
-	\tiny{o autor.}%
+		% \begin{block}{}
+			
+		% \end{block}
 
-    \end{table}
-    
+		% \begin{block}{}
+			
+		% \end{block}
+
+	}	
+
+
+	\only<2>{
+
+		% \begin{columns}
+		
+		
+			% \column{0.5\textwidth}
+
+
+			% Custos não considerados:
+			% \begin{itemize}
+			% 	\item Desenvolvimento de \textit{firmware};
+			% 	\item Invólucro de proteção;
+			% 	\item Homologação em órgãos competentes;
+			% \end{itemize}
+
+
+
+			% \column{0.5\textwidth}
+
+			\begin{table}[!h]
+			
+			\captionsetup{width=7cm}%Deixe da mesma largura que a tabela
+			\caption{\label{tab:custos_extras} \textit{Comparativo: Custo unitário revisado}}%
+			\resizebox{0.5\textwidth}{!}{
+			
+				\begin{tabular}{cc}
+					\toprule
+					Modelo & Valor (R\$)\\
+					\midrule \midrule
+				RCW-360           & 1.499,00  \\
+				EL-WiFi-TH        & 1.305,14  \\
+				TandD RTR-507B    & 2.242,57 \\
+				160 TH            & 2.842,00  \\
+				Hardware Proposto & 142,35  \\
+				\bottomrule
+				\end{tabular}%
+			
+				}
+				\source{o autor.}
+			\end{table}
+
+		% \end{columns}
+
+
+	}
 \end{frame}
 
 %% ---------------------------------------------------------------------------
