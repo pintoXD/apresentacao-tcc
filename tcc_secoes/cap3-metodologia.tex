@@ -89,29 +89,34 @@
             \end{table}
 \end{frame}
 
-\begin{frame}{Escopo de Projeto}
+% \begin{frame}{Escopo de Projeto}
 
-    \begin{block}{Escopo de projeto}
-        Desenvolvimento um \textit{datalogger} de baixo custo que seja capaz de ler temperatura, umidade relativa e luminosidade de um ambiente em que ele estiver instalado. Deve ser possível que essas leituras sejam realizadas periodicamente de forma que o intervalo mínimo entre cada possa estar na casa dos segundos e devem ser armazenadas em uma mídia de armazenamento de massa removível para facilitar o resgate dessas informações posteriormente.
-    \end{block}
+%     \begin{block}{Escopo de projeto}
+%         Desenvolvimento um \textit{datalogger} de baixo custo 
+%         que seja capaz de ler temperatura, umidade relativa e luminosidade 
+%         leituras sejam realizadas periodicamente de forma que o intervalo 
+%         mínimo entre cada possa estar na casa dos segundos e devem ser
+%          armazenadas em uma mídia de armazenamento de massa removível
+%           para facilitar o resgate dessas informações posteriormente.
+%     \end{block}
     
-\end{frame}
-
-
-
-
+% \end{frame}
 
 \begin{frame}{Especificações técnicas}
 
     \begin{enumerate}
-        \item Possuir a capacidade de ler a temperatura do ambiente;
-        \item Possuir a capacidade de ler a umidade relativa do ambiente;
-        \item Possuir a capacidade de ler o nível de luminosidade do ambiente;
-        \item Possuir alternativa de alimentação direta ou via bateria;
-        \item Leitura de sensores via interfaces I²C, SPI e/ou UART;
+        \item Possuir a capacidade de ler de um ambiente:
+        \begin{itemize}      
+                \item Temperatura;
+                \item Umidade relativa;
+                \item Nível de luminosidade;
+                
+        \end{itemize}
+        \item Alimentação direta ou via conjunto de 4 pilhas AA;
+        \item Leitura de sensores via interfaces ADC, I²C, SPI e/ou UART;
         % \item Formatação dos dados lidos dos sensores para auxiliar no envio e/ou coleta;
-        \item Persistir os dados em um cartão SD para facilitar a recuperação manual dos dados coletados;
-        \item Persistência dos dados coletados por no mínimo 45 dias;
+        \item Persistir os dados em um cartão SD;
+        % \item Persistência dos dados coletados por no mínimo 45 dias;
         % \item Interface de comunicação via rádio LoRa;
         % \item Envio periódico dos dados guardados via LoRaWan;
         \item Possuir interface de interação com o usuário;
@@ -122,21 +127,21 @@
 \end{frame}
 
 
-\begin{frame}{Arquitetura de Hardware}
+% \begin{frame}{Arquitetura de Hardware}
     
-     \begin{itemize}
-     \item Unidade de processamento;
-     \item Sensor de luminosidade;
-     \item Sensor de temperatura; 
-     \item Sensor de umidade;
-     \item Unidade de alimentação;
-     \item Unidade de interface de usuário;
-    %  \item Unidade de interface de comunicação USB;
-     \item Unidade de leitura e escrita de dados em cartão SD;
+%      \begin{itemize}
+%      \item Unidade de processamento;
+%      \item Sensor de luminosidade;
+%      \item Sensor de temperatura; 
+%      \item Sensor de umidade;
+%      \item Unidade de alimentação;
+%      \item Unidade de interface de usuário;
+%     %  \item Unidade de interface de comunicação USB;
+%      \item Unidade de leitura e escrita de dados em cartão SD;
      
     
-      \end{itemize}
- \end{frame}
+%       \end{itemize}
+%  \end{frame}
       
 \begin{frame}{Arquitetura de Hardware}
 
@@ -364,17 +369,17 @@
 \begin{frame}{Fonte de alimentação}
 
     \only<1>{
-        \begin{block}{Requisitos}
-            \begin{enumerate}
-                \item Fornecer 3,3 V;
-                \item Suportar alimentação por 4 pilhas;
-                \item ``Chaveamento'' entre pilhas e alimentação direta;
-            \end{enumerate}
-        \end{block}
-    }
+        % \begin{block}{Requisitos}
+        %     \begin{enumerate}
+        %         \item Fornecer 3,3 V;
+        %         \item Suportar alimentação por 4 pilhas AA;
+        %         % \item ``Chaveamento'' entre pilhas e alimentação direta;
+        %     \end{enumerate}
+        % \end{block}
+    % }
 
 % \framebreak
-    \only<2>{
+    % \only<2>{
 
         % \begin{columns}
         %     \column{0.35\textwidth}
@@ -410,58 +415,58 @@
 
 % \framebreak
     
-        \only<3>{        
+        \only<2>{        
             \begin{block}{Regulação de tensão}
 
             Quatro pilhas do tipo AA fornecem até 6V de tensão. É preciso reduzi-lá para 3,3 V, nível de tensão operacional dos demais componentes.
 
             \end{block}
 
-            \begin{columns}
+            % \begin{columns}
                     
-                    \column{0.5\linewidth}
-                    \centering
-                    \begin{itemize}
-                        \item Regulador Linear
-                        \begin{itemize}
-                            \item Baixo custo;
-                            % \item Menor uso de componentes;
-                            \item Baixa complexidade;
-                            \item Baixa eficiência;
-                            \item \textit{Step-down};
-                        \end{itemize}
-                    \end{itemize}
+            %         \column{0.5\linewidth}
+            %         \centering
+            %         \begin{itemize}
+            %             \item Regulador Linear
+            %             \begin{itemize}
+            %                 \item Baixo custo;
+            %                 % \item Menor uso de componentes;
+            %                 \item Baixa complexidade;
+            %                 \item Baixa eficiência;
+            %                 \item \textit{Step-down};
+            %             \end{itemize}
+            %         \end{itemize}
                     
-                    \column{0.5\linewidth}
+            %         \column{0.5\linewidth}
                     
-                    \begin{itemize}
-                        \item Regulador Chaveado
-                        \begin{itemize}
-                            \item Maior custo;
-                            % \item Maior uso de componentes;
-                            \item Alta complexidade;
-                            \item Alta eficiência;
-                            \item \textit{Step-up} ou \textit{Step-down};
-                        \end{itemize}
-                    \end{itemize}
+            %         \begin{itemize}
+            %             \item Regulador Chaveado
+            %             \begin{itemize}
+            %                 \item Maior custo;
+            %                 % \item Maior uso de componentes;
+            %                 \item Alta complexidade;
+            %                 \item Alta eficiência;
+            %                 \item \textit{Step-up} ou \textit{Step-down};
+            %             \end{itemize}
+            %         \end{itemize}
                     
-            \end{columns}
+            % \end{columns}
 
-        }    
+        % }    
 
 
 % \framebreak
-        \only<4>{
-            \begin{block}{Regulador linear \textit{low-dropout}}
+        % \only<4>{
+            % \begin{block}{Regulador linear \textit{low-dropout}}
 
-            Reguladores lineares que podem regular a tensão de saída mesmo quando a tensão entrada se aproximar muito da tensão de saída.
+            % Reguladores lineares que podem regular a tensão de saída mesmo quando a tensão entrada se aproximar muito da tensão de saída.
 
-            \end{block}
+            % \end{block}
 
             \begin{columns}
                 \column{0.45\textwidth}
                     \begin{itemize}
-                        \item Diodes AP2114HA-3.3TRG1
+                        \item LDO Diodes AP2114HA-3.3TRG1
                         \begin{itemize}
                             \item Suporta até 6,5 V de entrada;
                             \item 3,3 V fixo como saída;
@@ -488,20 +493,20 @@
 
 \begin{frame}{Design PCI}
 
-    \only<1>{
-    \begin{block}{Especificações}
+    % \only<1>{
+    % % \begin{block}{Especificações}
     
-    \begin{itemize}
-        \item Dimensões aproximadas de 50x50 mm;
-        \item Placa de duas camada;
-    \end{itemize}
-    \end{block}
-    }
+    % % \begin{itemize}
+    % %     \item Dimensões aproximadas de 50x50 mm;
+    % %     \item Placa de duas camada;
+    % % \end{itemize}
+    % % \end{block}
+    % }
       
     
     % \framesubtitle{\textit{Stackup} PCI}
     \centering
-    \only<2>{
+    \only<1>{
 
     \begin{block}{\textit{Stackup PCI}}
         
@@ -526,7 +531,7 @@
     }
     % \item Impedância típica - 50$\Omega$
     
-    \only<3>{
+    \only<2>{
     
     \framesubtitle{{Particionamento Funcional}}
     
@@ -554,20 +559,20 @@
 
     }
 
-    \only<4>{
+    % \only<3>{
     
-    \framesubtitle{{Posicionamento}}
+    % \framesubtitle{{Posicionamento}}
     
-    \begin{figure}
-        \centering
-        \caption{\textit{PCB Placement}}
-        \includegraphics[width=0.6\linewidth]{figuras/cap3/pcb/pcb_no_route.png}
-        \source{Elaborado pelo autor}
-        \label{fig:pcb_placement}
-    \end{figure}
-    }
+    % \begin{figure}
+    %     \centering
+    %     \caption{\textit{PCB Placement}}
+    %     \includegraphics[width=0.6\linewidth]{figuras/cap3/pcb/pcb_no_route.png}
+    %     \source{Elaborado pelo autor}
+    %     \label{fig:pcb_placement}
+    % \end{figure}
+    % }
 
-    \only<5>{
+    \only<3>{
 
     \framesubtitle{{Roteamento}}
 
@@ -591,7 +596,7 @@
     \end{columns}
     }
 
-    \only<6>{
+    \only<4>{
 
     \framesubtitle{{Roteamento}}
 
@@ -617,7 +622,7 @@
     }
 
 
-    \only<7>{
+    \only<5>{
 
         \begin{block}{Plano de Terra}
             Propicia o menor caminho de retorno possível
